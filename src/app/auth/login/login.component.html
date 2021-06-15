@@ -1,0 +1,66 @@
+<style>
+    .button{
+    border: none;
+    border-radius: 24px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+    .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #bdb2ff;
+  }
+  
+  .button1:hover {
+    background-color: #bdb2ff;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ffadad;
+  }
+  
+  .button2:hover {
+    background-color: #ffadad;
+    color: white;
+  }
+  
+  </style>
+  <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" style="background-image: url('../../assets/login.jpg'); 
+  background-size: cover; background-position: center;">  
+  
+      <mat-card class="uk-width-1-2@m" style="background-color:#457b9d">
+          <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+              <h3>LOGIN</h3>
+          </div>
+        <mat-card-content>
+            <mat-form-field  class="uk-width-1-1" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email">
+            </mat-form-field>
+
+              <mat-form-field class="uk-width-1-1" appearance="outline">
+                <mat-label>Password</mat-label> 
+                <input matInput placeholder="password">
+              </mat-form-field>
+            <div class="uk-flex uk-flex-right">
+                <div class="uk-width-expand">
+                  <button class="button button1" routerLink="/register">Create Account</button>
+                  <button class="button button2" routerLink="/forgot" style="margin:20px">Forgot</button>
+                </div>
+                <button mat-raised-button color="primary" >LOGIN</button>
+                
+            </div>
+            
+        </mat-card-content>
+      </mat-card>
+  </div>
