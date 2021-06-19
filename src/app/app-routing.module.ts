@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoverComponent } from './auth/cover/cover.component';
+import { CorauselComponent } from './corausel/corausel.component';
+
 
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
@@ -21,14 +23,23 @@ const routes: Routes = [
     component: RegisterComponent
   },
 
-  
+  {
+    path: 'corausel',
+    component:CorauselComponent
+  },
 
 
   {
     path: '',
     pathMatch:'full',
     redirectTo:'/cover'
-  }
+  },
+
+    {
+      path: 'tripapp',
+      loadChildren:()=>import('./tripapp/tripapp.module').then(mod=>mod.TripappModule)
+    }
+
 ];
 
 @NgModule({

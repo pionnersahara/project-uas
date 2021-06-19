@@ -11,5 +11,41 @@ export class TripappComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  mode:string='side';
+ //LogOut
+ logout()
+ {
+   let conf=confirm('Apakah anda ingin keluar dari aplikasi ini?');
+   if (conf)
+   {
+     localStorage.removeItem('appToken');
+     window.location.reload();
+   }
+ }
+  menu=[
+    {
+      name:'Dashboard',
+      icon:'dashboard',
+      url:'/tripapp/dashboard',
+    },
+
+    {
+      name:'Edit Image',
+      icon:'camera_enchance',
+      url:'/tripnapp/addpaket',
+    },
+    
+    {
+      group:'Menu Group',
+      children:[
+        {
+          name:'Image Gallery',
+          icon:'images',
+          url:'/tripapp/gallery'
+        }
+
+      ]
+    }
+  ];
 
 }

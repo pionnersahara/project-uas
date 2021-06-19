@@ -4,8 +4,25 @@ import { TripappComponent } from './tripapp/tripapp.component';
 import { WisatadetailsComponent } from './wisatadetails/wisatadetails.component';
 import { AddpaketComponent } from './addpaket/addpaket.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MaterialDesign } from 'src/Material/material';
 
-
+const routes:Routes =[
+  {
+    path: '',
+    component: TripappComponent,
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path:'wisatadetail',
+        component:WisatadetailsComponent
+      }
+    ]
+  }
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +32,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialDesign,
+    RouterModule.forChild(routes)
   ]
 })
 export class TripappModule { }
