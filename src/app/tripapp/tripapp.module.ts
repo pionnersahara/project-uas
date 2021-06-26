@@ -17,6 +17,10 @@ const routes:Routes =[
         component: DashboardComponent
       },
       {
+        path: 'addpaket',
+        component: AddpaketComponent
+      },
+      {
         path:'wisatadetail',
         component:WisatadetailsComponent
       }

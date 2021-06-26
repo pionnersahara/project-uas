@@ -12,13 +12,15 @@ import { CorauselComponent } from './corausel/corausel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BoostrapMaterial } from 'src/Material/bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     CoverComponent,
-    CorauselComponent
+    CorauselComponent,
+   
 
   ],
   imports: [

@@ -6,7 +6,8 @@
         </button>
         <span>WONDERFUL INDONESIA</span>
         <div class="uk-width-expand"></div>
-        <small>Admin</small>
+        <button mat-button (click)="logout ()">Admin</button>
+        <mat-icon matListIcon>logout</mat-icon>
         <button mat-button (click)="logout ()">LogOut</button>
     </mat-toolbar>
     <!--end toolbar-->
@@ -22,8 +23,8 @@
       [fixedBottomGap]="0">
     
       <mat-nav-list>
-          <mat-list-item routerLink="/tripapp/dashboard">
-            <mat-icon matListIcon>dashboard</mat-icon>
+          <mat-list-item routerLink="/tripapp/addpaket">
+            <mat-icon matListIcon>home</mat-icon>
             <h3 matLine>Dashboard</h3>
         </mat-list-item>
         <mat-list-item routerLink="/tripapp/addpaket">

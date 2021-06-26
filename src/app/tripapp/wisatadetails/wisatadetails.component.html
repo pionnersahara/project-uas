@@ -1,1 +1,34 @@
-<p>wisatadetails works!</p>
+<h3 mat-dialog-title>Tambah Paket Wisata</h3>
+<div mat-dialog-content>      
+   <mat-form-field style="width: 100%;">
+        <mat-label>Nama Wisata</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Wisata</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Kode Wisata</mat-label>
+        <input matInput >
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Paket</mat-label>
+        <input matInput >
+    </mat-form-field>
+    
+    <mat-form-field style="width: 100%;">
+        <mat-label>Fasilitas </mat-label>
+        <input matInput >
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Deskripsi Wisata</mat-label>
+        <input matInput >
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+
+    <div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Batal</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true"> Simpan</button> 
+</div>

@@ -26,7 +26,7 @@ export class TripappComponent implements OnInit {
     {
       name:'Dashboard',
       icon:'dashboard',
-      url:'/tripapp/dashboard',
+      url:'/tripapp/addpaket',
     },
 
     {
