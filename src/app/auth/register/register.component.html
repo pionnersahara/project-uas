@@ -14,9 +14,9 @@
   }
 
   .button1 {
-    background-color: rgb(228, 130, 130);
-    color: black;
-    border: 2px solid #14213d;
+    background-color: rgb(255, 160, 160);
+    color: white;
+    border: 2px solid #e63946;
   }
 
   .button1:hover {
@@ -45,12 +45,11 @@
     background-color: #cf727a;
     color: white;
   }
-
 </style>
 <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" style="background-image: url('../../assets/register.jpg'); 
   background-size: cover; background-position: center;">
 
-  <mat-card class="uk-width-1-2@m" style="background-color:rgb(184, 117, 117);">
+  <mat-card class="uk-width-1-2@m" style="background-color:rgb(255, 227, 227);">
     <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
       <h3>Create Account</h3>
     </div>
@@ -66,9 +65,9 @@
 
       <div class="uk-flex uk-flex-right">
         <div class="uk-width-expand">
-          <button class="button button1" routerLink="/login">I have an account</button>
+          <button class="button button3" routerLink="/login">I have an account</button>
         </div>
-        <button class="button button3"
+        <button class="button button1"
           (click)="authService.SignUp(userEmail.value, userPassword.value)">Register</button>
       </div>
     </mat-card-content>

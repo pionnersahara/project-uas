@@ -61,15 +61,15 @@ export class WisatadetailsComponent implements OnInit {
 
       this.afs
         .collection('trips')
-        .doc(doc)
+        .doc(this.data.id)
         .update(this.data)
         .then((res) => {
-          this.dialogRef.close();
           this.openSnackBar('Selamat data anda berhasil diupdate!', 'ok');
+          this.dialogRef.close();
         })
         .catch((err) => {
-          this.openSnackBar('Maaf anda tidak dapat menyimpan data', 'ok');
           console.log(err);
+          this.openSnackBar('Maaf anda tidak dapat menyimpan data', 'ok');
         });
     }
   }

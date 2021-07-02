@@ -26,6 +26,13 @@
         background-color: #14213d;
         color: white;
     }
+
+    .tengah {
+        position: absolute;
+        bottom: 170px;
+        left: 47%;
+        z-index: 5;
+    }
 </style>
 <header>
     <ngb-carousel>
@@ -57,5 +64,7 @@
             </div>
         </ng-template>
     </ngb-carousel>
-    <button class="button button1" routerLink="/tripapp">NEXT</button>
+    <div class="btn-tengah">
+        <button class="button button1 tengah" routerLink="/tripapp">NEXT</button>
+    </div>
 </header>
