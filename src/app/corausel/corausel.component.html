@@ -1,59 +1,61 @@
 <style>
-  header{
-background-color: black;
-  }
-  .button{
-  border: none;
-  border-radius: 24px;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  }
-  .button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #14213d;
-}
+    header {
+        background-color: black;
+    }
 
-.button1:hover {
-  background-color: #14213d;
-  color: white;
-}
+    .button {
+        border: none;
+        border-radius: 24px;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #14213d;
+    }
+
+    .button1:hover {
+        background-color: #14213d;
+        color: white;
+    }
 </style>
 <header>
-<ngb-carousel>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="../../assets/pulau komodo.png" alt="Random first slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="../../assets/bromo.png" alt="Random second slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="../../assets/nusa.png" alt="Random third slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-  <button class="button button1" routerLink="/tripapp">NEXT</button>
+    <ngb-carousel>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="./assets/pulau komodo.png" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="./assets/bromo.png" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="./assets/nusa.png" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    <button class="button button1" routerLink="/tripapp">NEXT</button>
 </header>

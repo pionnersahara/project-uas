@@ -1,3 +1,4 @@
+import { AuthService } from './../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
   hide:boolean=true;
   
-  constructor() {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {
   }

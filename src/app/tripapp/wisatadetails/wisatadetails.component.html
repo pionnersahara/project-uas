@@ -1,34 +1,35 @@
-<h3 mat-dialog-title>Tambah Paket Wisata</h3>
-<div mat-dialog-content>      
-   <mat-form-field style="width: 100%;">
-        <mat-label>Nama Wisata</mat-label>
-        <input matInput>
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Wisata</mat-label>
-        <input matInput>
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Kode Wisata</mat-label>
-        <input matInput >
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Harga Paket</mat-label>
-        <input matInput >
-    </mat-form-field>
-    
-    <mat-form-field style="width: 100%;">
-        <mat-label>Fasilitas </mat-label>
-        <input matInput >
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Deskripsi Wisata</mat-label>
-        <input matInput >
-    </mat-form-field>
-</div>
-<mat-dialog-actions>
+<h3 class="font-weight-bold">Tambah Paket Wisata</h3>
+<div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" required matInput name="title" [(ngModel)]="data.title" />
+  </div>
 
-    <div mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Batal</button>
-    <button mat-raised-button color="primary" [mat-dialog-close]="true"> Simpan</button> 
+  <div class="form-group">
+    <label for="Daerah">Daerah</label>
+    <input type="text" class="form-control" id="daerah" required matInput name="daerah" [(ngModel)]="data.daerah" />
+  </div>
+
+  <div class="form-group">
+    <label for="harga">Harga</label>
+    <input type="text" class="form-control" id="harga" required matInput name="harga" [(ngModel)]="data.harga" />
+  </div>
+
+  <div class="form-group">
+    <label for="fasilitas">Fasilitas</label>
+    <input type="text" class="form-control" id="fasilitas" required matInput name="fasilitas"
+      [(ngModel)]="data.fasilitas" />
+  </div>
+
+  <div class="form-group">
+    <label for="deskripsi">Deskripsi Wisata</label>
+    <textarea type="text" class="form-control" id="deskripsi" required matInput name="deskripsi"
+      [(ngModel)]="data.deskripsi"></textarea>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-danger mr-3" mat-dialog-close>Batal</button>
+    <button (click)="simpan()" class="btn btn-success">Submit</button>
+  </div>
+
 </div>

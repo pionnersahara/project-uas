@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "proyek-uas-945a6": {
+      "hosting": {
+        "Trip-Apps": [
+          "proyek-uas-945a6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "proyek-uas-945a6"
+  }
+}

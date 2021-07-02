@@ -1,3 +1,5 @@
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TripappComponent } from './tripapp/tripapp.component';
@@ -6,6 +8,7 @@ import { AddpaketComponent } from './addpaket/addpaket.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from 'src/Material/material';
+import { FormsModule } from '@angular/forms';
 
 const routes:Routes =[
   {
@@ -14,7 +17,7 @@ const routes:Routes =[
     children: [
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
       },
       {
         path: 'addpaket',
@@ -38,7 +41,8 @@ const routes:Routes =[
   imports: [
     CommonModule,
     MaterialDesign,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ]
 })
 export class TripappModule { }
