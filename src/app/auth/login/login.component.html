@@ -40,7 +40,7 @@
 
   <mat-card class="uk-width-1-2@m" style="background-color:rgb(246, 236, 229)">
     <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
-      <h3>LOGIN</h3>
+      <h3>Login</h3>
     </div>
     <mat-card-content>
       <mat-form-field class="uk-width-1-1" appearance="outline">
@@ -54,7 +54,8 @@
       </mat-form-field>
       <div class="uk-flex uk-flex-right ">
         <div class="uk-width-expand">
-          <button class="button button1" routerLink="/register">Create Account</button>
+          <button class="button button1 mx-2" routerLink="/register">Create Account</button>
+          <button class="button button1 mx-2" routerLink="/lupa-password">Lupa Password</button>
         </div>
         <button class="button button2" color="primary"
           (click)="authService.SignIn(userEmail.value, userPassword.value)">Login</button>

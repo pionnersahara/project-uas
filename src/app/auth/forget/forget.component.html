@@ -1,0 +1,61 @@
+<style>
+    .button {
+        border: none;
+        border-radius: 24px;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 20px auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #bdb2ff;
+    }
+
+    .button2 {
+        background-color: rgb(0, 140, 233);
+        color: white;
+        border: 2px solid #bdb2ff;
+    }
+
+    .button1:hover {
+        background-color: #bdb2ff;
+        color: white;
+    }
+
+    .button2:hover {
+        background-color: #ffadad;
+        color: white;
+    }
+</style>
+<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" style="background-image: url('./assets/bromo.png'); 
+    background-size: cover; background-position: center;">
+
+    <mat-card class="uk-width-1-2@m" style="background-color:rgb(246, 236, 229)">
+        <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+            <h3>Lupa Password</h3>
+        </div>
+        <mat-card-content>
+            <mat-form-field class="uk-width-1-1" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Email" #userEmail>
+            </mat-form-field>
+
+            <div class="uk-flex uk-flex-right ">
+                <div class="uk-width-expand">
+                    <button class="button button1" routerLink="/login">login</button>
+                </div>
+                <button class="button button2" color="primary"
+                    (click)="authService.ForgotPassword(userEmail.value)">Kirim</button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable, NgZone } from '@angular/core';
 import { User } from '../user';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -17,7 +18,8 @@ export class AuthService {
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
     public router: Router,
-    public ngZone: NgZone
+    public ngZone: NgZone,
+    public snack: MatSnackBar
   ) {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
@@ -30,6 +32,10 @@ export class AuthService {
     });
   }
 
+  snackBar(message: string, action: string) {
+    this.snack.open(message, action);
+  }
+
   SignIn(email: string, password: string) {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
@@ -40,7 +46,7 @@ export class AuthService {
         this.SetUserData(result.user);
       })
       .catch((error) => {
-        window.alert('Silahkan login sekali lagi');
+        this.snackBar('Silahkan login sekali lagi', 'close');
       });
   }
 
@@ -49,18 +55,22 @@ export class AuthService {
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         this.SetUserData(result.user);
-        window.alert('Pendaftaran anda berhasil');
+        this.snackBar('Pendaftaran anda berhasil', 'close');
       })
       .catch((error) => {
-        window.alert('Maaf pendaftaran anda ditolak');
+        this.snackBar('Maaf pendaftaran anda ditolak', 'close');
       });
   }
 
-  ForgotPassword(passwordResetEmail: string) {
+  ForgotPassword(email: string) {
     return this.afAuth
-      .sendPasswordResetEmail(passwordResetEmail)
+      .sendPasswordResetEmail(email)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        this.snackBar(
+          'Password reset sudah dikirim, silahkan cek email anda',
+          'close'
+        );
+        this.router.navigate(['/login']);
       })
       .catch((error) => {
         window.alert(error);
